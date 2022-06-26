@@ -1,0 +1,90 @@
+<html>
+  <body>
+    <pre>
+      <style>
+     pre { white-space: pre-wrap; overflow-wrap: break-word; width: 800px; }
+     body:before { content: "<body>" }
+     body:after { content: "</body>" }
+     pre:before { content: "<pre>"; display: block; }
+     pre:after { content: "</pre>" }
+     strong:before { content: "<strong>" }
+     strong:after { content: "</strong>" }
+     style {
+         display: inline-block;
+         font-family: monospace;
+     }
+     style:before { content: "<style>"; }
+     style:after { content: "</style\
+>"; }</style>
+
+Writing <strong>HTML</strong>! 
+
+this is a <strong>'visible Web page'</strong>, where you can see all
+the source markup for the page on the actual page presented by your
+browser. I'll explain what it was inspired by in a second...
+
+I like the idea that everyone who uses the computer would, in the
+course of using the computer, get little hints and hooks into how it
+works and how to change it. that you don't have this smooth Apple-like
+finished surface, you have something that invites editing and
+curiosity and is always a work in progress
+
+I have to say, the visible Web page presents a kinda-weird set of
+constraints. like, I can make any tag visible by adding it to the
+style below, but I can't put attributes on the tags, I guess.
+
+or actually, I guess I <strong>could</strong>, by adding those
+specific concrete tags to the style ... let's try that
+
+but first, a separator:
+
+      <style>hr:before { content: "<hr>"; }</style>
+      <hr>
+
+ok -- let's see if we can get some list and links in here:
+
+      <style>
+       ul:before { content: "<ul>" }
+       ul:after { content: "</ul>" }
+       li:before { content: "<li>" }
+       li:after { content: "</li>" }
+       a[href="https://twitter.com/rsnous/status/1520214453026967554"]:before { content: "<a href=\"https://twitter.com/rsnous/status/1520214453026967554\">" }
+       a[href="https://github.com/osnr/horrifying-pdf-experiments"]:before { content: "<a href=\"https://github.com/osnr/horrifying-pdf-experiments\">" }
+       a[href="https://twitter.com/rsnous/status/1351302810680258561"]:before { content: "<a href=\"https://twitter.com/rsnous/status/1351302810680258561\">" }
+       a[href="https://twitter.com/suricrasia/status/1436115387591110657"]:before { content: "<a href=\"https://twitter.com/suricrasia/status/1436115387591110657\">"; }
+       a[href="https://twitter.com/yoshikischmitz/status/1198096409087463424"]:before { content: "<a href=\"https://twitter.com/yoshikischmitz/status/1198096409087463424\">"; }
+       a:after { content: "</a>" }</style>
+
+this was inspired by a few things (TODO: add links):
+
+      <ul>
+        <li>Ability to make style tags visible/editable on a Web page</a></li>
+        <li><a href="https://twitter.com/yoshikischmitz/status/1198096409087463424">Yoshiki's comment</a> about Markdown editors that show the markup as well as the presentation</li>
+        <li><a href="https://twitter.com/suricrasia/status/1436115387591110657">Blackle's SVG Web where scripts appear as icons</a>; this sense of code appearing to the end user, not just being an internal implementation detail
+
+          (then you can also point to a tag and talk about it with other people with reference to the page! the source code becomes this concrete pointable thing in the same space as its output, kinda like the programs in Dynamicland too)</li>
+      </ul>
+
+      <a href="https://twitter.com/rsnous/status/1520214453026967554">also kinda related idea</a>
+
+it also feels related to the old-school Fortran/embedded style of
+programming where you have to predeclare/allocate all your
+memory/variables before you can do anything, like I commented on in
+the <a href="https://github.com/osnr/horrifying-pdf-experiments">PDF Breakout piece</a> (where
+I had to preallocate all the UI elements).
+
+it's funny how much friction this adds to the act of inserting a link
+& how much that affects my behavior; it's like the friction of
+inserting images (and I think that's an important <a href="https://twitter.com/rsnous/status/1351302810680258561">criticism</a> of that workflow)
+
+      <hr>
+
+      <style>
+       a[href="https://twitter.com/htmlenergy/status/1540721203354148865"]:before { content: "<a href=\"https://twitter.com/htmlenergy/status/1540721203354148865\">"; }
+      </style>
+
+anyway, hope you enjoyed this, and hello from the <a href="https://twitter.com/htmlenergy/status/1540721203354148865">HTML Energy freewrite</a>!
+
+    </pre>
+  </body>
+</html>
